@@ -1,513 +1,344 @@
-I'll create an enhanced 10/10 version of your portfolio with modern design, complete content, and all the improvements we discussed. Here's the transformed code:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Dilip Kumar Singh - Senior Java Backend Engineer & Digital Product Creator. 13+ years in Spring Boot, Microservices, and building scalable systems. Published on Medium with 10K+ followers." />
-  <meta name="keywords" content="Java, Spring Boot, Microservices, Backend Engineer, Azure, GraphQL, Product Creator" />
-  <meta name="author" content="Dilip Kumar Singh" />
-  <meta property="og:title" content="Dilip Kumar Singh | Senior Java Backend Engineer & Content Creator" />
-  <meta property="og:description" content="Backend engineer, entrepreneur & technical content creator. Building products on Gumroad, publishing on Medium." />
-  <meta property="og:type" content="website" />
-  
-  <title>Dilip Kumar Singh | Senior Java Backend Engineer & Digital Product Creator</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #e5e7eb;
-      padding: 0.8rem 0;
-      z-index: 100;
-    }
-
-    .navbar-content {
-      max-width: 1000px;
-      margin: auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-brand {
-      font-weight: 700;
-      color: #1f2937;
-      font-size: 16px;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #6b7280;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #2563eb;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    .header-section {
-      margin-bottom: 60px;
-      animation: fadeInDown 0.8s ease-out;
-    }
-
-    .header-content {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .header-text h1 {
-      font-size: 42px;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, #1f2937 0%, #2563eb 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .subtitle {
-      font-size: 16px;
-      color: #6b7280;
-      margin-bottom: 16px;
-      line-height: 1.8;
-    }
-
-    .role-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-      color: white;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    .stat-row {
-      display: flex;
-      gap: 30px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .stat {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .stat-number {
-      font-size: 20px;
-      font-weight: 700;
-      color: #2563eb;
-    }
-
-    .stat-label {
-      font-size: 13px;
-      color: #6b7280;
-    }
-
-    .avatar {
-      width: 200px;
-      height: 200px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 80px;
-      font-weight: 700;
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 12px;
-      margin-top: 24px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 24px;
-      border-radius: 8px;
-      border: none;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-      text-align: center;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-      color: white;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
-    }
-
-    .btn-secondary {
-      background: white;
-      color: #2563eb;
-      border: 2px solid #2563eb;
-    }
-
-    .btn-secondary:hover {
-      background: #eff6ff;
-      transform: translateY(-2px);
-    }
-
-    .section {
-      margin-bottom: 60px;
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 3px solid #2563eb;
-      color: #1f2937;
-      display: inline-block;
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      border: 1px solid #e5e7eb;
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-      border-color: #2563eb;
-    }
-
-    .card h3 {
-      color: #1f2937;
-      margin-bottom: 12px;
-      font-size: 18px;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 24px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-      color: #1e40af;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 500;
-      border: 1px solid #bfdbfe;
-      transition: all 0.3s ease;
-    }
-
-    .tag:hover {
-      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-      color: white;
-      transform: scale(1.05);
-    }
-
-    .project {
-      margin-bottom: 0;
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-      margin-bottom: 12px;
-    }
-
-    .project-title {
-      font-weight: 700;
-      font-size: 16px;
-      color: #1f2937;
-    }
-
-    .project-badge {
-      background: #dcfce7;
-      color: #166534;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .project-meta {
-      font-size: 13px;
-      color: #6b7280;
-      margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      margin-bottom: 12px;
-      padding-left: 24px;
-      position: relative;
-      color: #374151;
-      font-size: 15px;
-    }
-
-    li:before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #2563eb;
-      font-weight: bold;
-    }
-
-    .timeline {
-      position: relative;
-      padding-left: 30px;
-    }
-
-    .timeline:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(180deg, #2563eb 0%, #1e40af 100%);
-    }
-
-    .timeline-item {
-      margin-bottom: 24px;
-      position: relative;
-    }
-
-    .timeline-item:before {
-      content: '';
-      position: absolute;
-      left: -36px;
-      top: 4px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #2563eb;
-      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-    }
-
-    .achievements {
-      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-      border-left: 4px solid #2563eb;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 24px 0;
-    }
-
-    .achievements-title {
-      font-weight: 700;
-      color: #1e40af;
-      margin-bottom: 12px;
-    }
-
-    .content-section {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      margin-top: 12px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .content-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .content-list li {
-      padding-left: 24px;
-      margin-bottom: 10px;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 16px;
-      margin-top: 24px;
-      flex-wrap: wrap;
-    }
-
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 16px;
-      background: #f3f4f6;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #1f2937;
-      font-size: 14px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      border: 1px solid #d1d5db;
-    }
-
-    .social-link:hover {
-      background: #2563eb;
-      color: white;
-      border-color: #2563eb;
-    }
-
-    .icon {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      vertical-align: middle;
-    }
-
-    footer {
-      margin-top: 80px;
-      padding: 40px 20px;
-      text-align: center;
-      border-top: 1px solid #e5e7eb;
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    .footer-content {
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header-content {
-        grid-template-columns: 1fr;
-      }
-
-      .avatar {
-        width: 150px;
-        height: 150px;
-        font-size: 60px;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-
-      h2 {
-        font-size: 22px;
-      }
-
-      .nav-links {
-        gap: 1rem;
-        font-size: 13px;
-      }
-
-      .stat-row {
-        gap: 16px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description" content="Dilip Kumar Singh – Senior Java Backend Engineer & Technical Lead with 13+ years experience across HRMS, Travel, Insurance domains.">
+<meta name="keywords" content="Senior Java Engineer, Java Technical Lead, Spring Boot, Microservices, Azure, System Design">
+
+<title>Dilip Kumar Singh | Senior Java Backend Engineer</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#ffffff,#f8fafc);
+  color:#1f2937;
+  line-height:1.6
+}
+.container{max-width:1000px;margin:auto;padding:60px 20px}
+
+nav{
+  position:sticky;
+  top:0;
+  background:#ffffffee;
+  border-bottom:1px solid #e5e7eb;
+  padding:12px 0;
+  z-index:10
+}
+nav div{
+  max-width:1000px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  padding:0 20px;
+  align-items:center
+}
+nav a{
+  color:#374151;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  margin-left:16px
+}
+nav a:hover{color:#2563eb}
+
+h1{
+  font-size:42px;
+  background:linear-gradient(135deg,#111827,#2563eb);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:8px
+}
+.subtitle{color:#6b7280;max-width:720px;margin-bottom:20px}
+
+.badge{
+  display:inline-block;
+  background:#2563eb;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:16px
+}
+
+.section{margin-top:80px}
+h2{
+  font-size:28px;
+  margin-bottom:16px;
+  border-bottom:3px solid #2563eb;
+  display:inline-block;
+  padding-bottom:6px
+}
+.section-note{
+  color:#6b7280;
+  margin-bottom:24px;
+  font-size:14px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px
+}
+
+.card{
+  background:#fff;
+  padding:24px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 6px 20px rgba(0,0,0,.06)
+}
+.card-muted{
+  background:#fafafa;
+  border:1px dashed #d1d5db;
+  box-shadow:none
+}
+
+.card h3{margin-bottom:10px}
+.card p{color:#6b7280;font-size:14px}
+
+ul{list-style:none;margin-top:12px}
+li{
+  padding-left:20px;
+  position:relative;
+  margin-bottom:8px
+}
+li:before{
+  content:"▸";
+  position:absolute;
+  left:0;
+  color:#2563eb
+}
+
+.tags span{
+  display:inline-block;
+  background:#eff6ff;
+  color:#1e40af;
+  padding:6px 12px;
+  margin:4px;
+  border-radius:6px;
+  font-size:13px
+}
+
+/* CTA */
+.cta-bar{
+  margin-top:24px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap
+}
+.cta-primary{
+  background:#2563eb;
+  color:white;
+  padding:12px 24px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  border:2px solid #2563eb
+}
+.cta-primary:hover{background:#1e40af;border-color:#1e40af}
+.cta-secondary{
+  background:white;
+  color:#2563eb;
+  padding:12px 24px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  border:2px solid #2563eb
+}
+.cta-secondary:hover{background:#eff6ff}
+
+footer{
+  margin-top:100px;
+  text-align:center;
+  padding:40px 20px;
+  border-top:1px solid #e5e7eb;
+  color:#6b7280;
+  font-size:14px
+}
+</style>
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="navbar-content">
-      <a href="#" class="nav-brand">Dilip Kumar Singh</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#content">Content</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+<nav>
+  <div>
+    <strong>Dilip Kumar Singh</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#medium">Medium</a>
+      <a href="#apps">Apps</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<section id="about">
+  <span class="badge">Senior Java Backend Engineer / Technical Lead</span>
+  <h1>Dilip Kumar Singh</h1>
+  <p class="subtitle">
+    I architect and deliver enterprise backend systems that scale, remain stable,
+    and support real business workflows.
+    13+ years across Travel, HRMS, and Insurance domains with deep leadership experience.
+  </p>
+
+  <div class="cta-bar">
+    <a href="mailto:career.dilip.kumar@gmail.com" class="cta-primary">Email Me</a>
+    <a href="https://linkedin.com/in/dilip04" target="_blank" class="cta-secondary">LinkedIn</a>
+    <a href="https://github.com/dilip-4" target="_blank" class="cta-secondary">GitHub</a>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <h2>Core Skills</h2>
+  <div class="tags">
+    <span>Java (8–17)</span><span>Spring Boot</span><span>Microservices</span>
+    <span>REST / GraphQL</span><span>MongoDB</span><span>PostgreSQL</span>
+    <span>Redis</span><span>Kafka</span><span>Docker</span>
+    <span>Kubernetes</span><span>Azure</span><span>OAuth2 / JWT</span>
+    <span>System Design</span>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <h2>Professional Experience</h2>
+  <p class="section-note">Recent roles first · Early career shown for completeness</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Publicis Sapient</h3>
+      <p>Senior Associate Technology L2 · Jun 2022 – Present</p>
+      <ul>
+        <li>Led architecture and delivery of Enrich+ HRMS platform</li>
+        <li>Designed scalable microservices on Azure</li>
+        <li>Handled estimations, reviews, releases, and stakeholder demos</li>
       </ul>
     </div>
-  </nav>
 
-  <div class="container">
-    <!-- Header Section -->
-    <div class="header-section" id="about">
-      <div class="header-content">
-        <div class="header-text">
-          <div class="role-badge">Senior Java Backend Engineer</div>
-          <h1>Dilip Kumar Singh</h1>
-          <p class="subtitle">
-            Building scalable backend systems & digital products | 13+ years in Java & Spring Boot | 
-            Technical content creator on Medium | Entrepreneur & Product Builder
-          </p
+    <div class="card">
+      <h3>ChainThat Limited</h3>
+      <p>Product Technical Lead · Jan 2019 – Feb 2022</p>
+      <ul>
+        <li>Insurance platforms covering full policy lifecycle</li>
+        <li>Kafka-based event-driven integrations</li>
+        <li>Blockchain solutions using CORDA</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>InterGlobe Technologies</h3>
+      <p>Senior Java Developer · Jul 2015 – Jan 2019</p>
+      <ul>
+        <li>Government airline risk assessment systems (SITA)</li>
+        <li>Passenger screening & watchlist workflows</li>
+      </ul>
+    </div>
+
+    <div class="card card-muted">
+      <h3>NIIT Technologies Limited</h3>
+      <p>Java Developer · Jun 2011 – Jun 2015</p>
+      <ul>
+        <li>Travel and airline domain systems (SITA, Sabre)</li>
+        <li>Strong foundation in SOA and enterprise Java</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <h2>Key Projects</h2>
+  <p class="section-note">Primary projects first · Foundational projects shown for completeness</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Enrich Plus (HRMS)</h3>
+      <ul>
+        <li>Microservices with MongoDB & Redis caching</li>
+        <li>Dockerized services on Kubernetes</li>
+        <li>Secure APIs with Spring Security & JWT</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Beyond Policy Administration</h3>
+      <ul>
+        <li>Insurance contract lifecycle platform</li>
+        <li>Kafka, PostgreSQL, REST APIs</li>
+      </ul>
+    </div>
+
+    <div class="card card-muted">
+      <h3>Foundational Projects (2011–2019)</h3>
+      <ul>
+        <li>Syncier – Blockchain-based insurance workflows (CORDA)</li>
+        <li>SITA ARAS & MGCP – Government airline risk systems</li>
+        <li>CESDirect & Voyager – Travel and reservation platforms</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="medium">
+  <h2>Technical Writing (Medium)</h2>
+  <div class="card">
+    <p>Writing about Java, Spring Boot, microservices, system design, and engineering leadership.</p>
+    <div class="cta-bar">
+      <a href="https://medium.com/@YOUR_MEDIUM" target="_blank" class="cta-secondary">Read on Medium</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="apps">
+  <h2>Apps & Digital Products</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Dual Face Sticky Notes</h3>
+      <p>Java-based desktop productivity tool.</p>
+      <div class="cta-bar">
+        <a href="https://gumroad.com/YOUR_PRODUCT" target="_blank" class="cta-secondary">View Product</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Creator Idea Box</h3>
+      <p>Fast idea capture tool for creators.</p>
+      <div class="cta-bar">
+        <a href="https://gumroad.com/YOUR_PRODUCT" target="_blank" class="cta-secondary">View Product</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Get in Touch</h2>
+  <div class="card">
+    <ul>
+      <li>Email: career.dilip.kumar@gmail.com</li>
+      <li>Location: Gurgaon, India</li>
+      <li>LinkedIn: linkedin.com/in/dilip04</li>
+      <li>GitHub: github.com/dilip-4</li>
+    </ul>
+    <div class="cta-bar">
+      <a href="mailto:career.dilip.kumar@gmail.com" class="cta-primary">Start a Conversation</a>
+      <a href="https://linkedin.com/in/dilip04" target="_blank" class="cta-secondary">Message on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Built with HTML5 & CSS3. Hosted on GitHub Pages.
+</footer>
+
+</body>
+</html>
