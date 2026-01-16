@@ -11,6 +11,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   background:linear-gradient(135deg,#ffffff,#f8fafc);
@@ -43,6 +44,13 @@ nav a{
   margin-left:16px
 }
 nav a:hover{color:#2563eb}
+
+.nav-title{
+  font-weight:700;
+  font-size:16px;
+  color:#1f2937;
+  text-decoration:none
+}
 
 h1{
   font-size:42px;
@@ -166,9 +174,12 @@ footer{
 
 <body>
 
+<!-- SCROLL TARGET -->
+<div id="top"></div>
+
 <nav>
   <div>
-    <strong>Dilip Kumar Singh</strong>
+    <a href="#top" class="nav-title">Dilip Kumar Singh</a>
     <div>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -293,7 +304,7 @@ footer{
   <div class="card">
     <p>Writing about Java, Spring Boot, microservices, system design, and engineering leadership.</p>
     <div class="cta-bar">
-      <a href="https://medium.com/@YOUR_MEDIUM" target="_blank" class="cta-secondary">Read on Medium</a>
+      <a href="https://medium.com/@BuildCatalyst" target="_blank" class="cta-secondary">Read on Medium</a>
     </div>
   </div>
 </section>
@@ -303,16 +314,31 @@ footer{
   <div class="grid">
     <div class="card">
       <h3>Dual Face Sticky Notes</h3>
-      <p>Java-based desktop productivity tool.</p>
-      <div class="cta-bar">
+      <p>A privacy-focused desktop notes app that allows users to store hidden,
+password-protected notes behind a normal visible note.
+Sensitive content is revealed only after entering the correct password.</p>
+	  <ul>
+		  <li>Dual-layer notes: visible note with a hidden private side</li>
+		  <li>Password-protected flip to access secret content</li>
+		  <li>Works completely offline with local storage</li>
+	  </ul>
+      <!--<div class="cta-bar">
         <a href="https://gumroad.com/YOUR_PRODUCT" target="_blank" class="cta-secondary">View Product</a>
-      </div>
+      </div>-->
     </div>
     <div class="card">
       <h3>Creator Idea Box</h3>
-      <p>Fast idea capture tool for creators.</p>
-      <div class="cta-bar">
-        <a href="https://gumroad.com/YOUR_PRODUCT" target="_blank" class="cta-secondary">View Product</a>
+		<p>
+		Offline Windows desktop app for instant idea capture without breaking focus.
+		Built for developers, founders, and creators who need speed, privacy, and zero friction.
+		</p>
+		<ul>
+		  <li>One-click popup for fast idea capture</li>
+		  <li>Works 100% offline · No login · No tracking</li>
+		  <li>Lightweight, distraction-free UI</li>
+		</ul>
+		<div class="cta-bar">
+        <a href="https://dilipbuilds.gumroad.com/l/wtnbi" target="_blank" class="cta-secondary">View Product</a>
       </div>
     </div>
   </div>
@@ -327,6 +353,7 @@ footer{
       <li>LinkedIn: linkedin.com/in/dilip04</li>
       <li>GitHub: github.com/dilip-4</li>
     </ul>
+
     <div class="cta-bar">
       <a href="mailto:career.dilip.kumar@gmail.com" class="cta-primary">Start a Conversation</a>
       <a href="https://linkedin.com/in/dilip04" target="_blank" class="cta-secondary">Message on LinkedIn</a>
